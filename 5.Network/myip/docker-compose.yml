@@ -6,8 +6,8 @@ services:
     container_name: myip
     restart: unless-stopped
     # network_mode: bridge
-    # ports:
-    #   - 18966:18966
+    ports:
+      - 28966:18966
     networks:
       - dokploy-network
     labels:
