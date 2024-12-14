@@ -5,22 +5,16 @@ services:
     image: jason5ng32/myip:latest
     container_name: myip
     restart: unless-stopped
-    network_mode: bridge
-    ports:
-      - 18966:18966
-    # networks:
-    #   - traefik
+    # network_mode: bridge
+    # ports:
+    #   - 18966:18966
+    networks:
+      - dokploy-network
     labels:
-    #   - traefik.enable=true
-    #   - traefik.docker.network=traefik
-    #   - traefik.http.routers.myip.entrypoints=https
-    #   - traefik.http.routers.myip.rule=Host(`myip.godd.site`)
-    #   - traefik.http.routers.myip.tls=true
-    #   - traefik.http.routers.myip.tls.certresolver=myresolver
-    #   - traefik.http.routers.myip.tls.domains[0].main=godd.site
-    #   - traefik.http.routers.myip.tls.domains[0].sans=*.godd.site
-    #   - traefik.http.services.myip.loadbalancer.server.scheme=http
-    #   - traefik.http.services.myip.loadbalancer.server.port=18966
+      - traefik.enable=true
+      - traefik.http.routers.myip.rule=Host(`myip.godd.site`)
+      - traefik.http.routers.myip.entrypoints=web
+      - traefik.http.services.myip.loadbalancer.server.port=18966
       - homepage.group=Public
       - homepage.name=myip
       - homepage.icon=https://myip.godd.site:6443/logos/ios-logo-512.png
@@ -28,6 +22,6 @@ services:
       - homepage.description=查询IP，出口IP，IP信息
       - com.centurylinklabs.watchtower.enable=true
 
-# networks:
-#   traefik:
-#     external: true
+networks:
+  dokploy-network:
+    external: true
