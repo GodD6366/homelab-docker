@@ -6,15 +6,15 @@ services:
     container_name: myip
     restart: unless-stopped
     # network_mode: bridge
-    ports:
-      - 28966:18966
+    # ports:
+    #   - 18966:18966
     networks:
       - dokploy-network
     labels:
-      # - traefik.enable=true
-      # - traefik.http.routers.myip.rule=Host(`myip.godd.site`)
-      # - traefik.http.routers.myip.entrypoints=web
-      # - traefik.http.services.myip.loadbalancer.server.port=18966
+      - traefik.enable=true
+      - traefik.http.routers.myip.rule=Host(`myip.godd.site`)
+      - traefik.http.routers.myip.entrypoints=web
+      - traefik.http.services.myip.loadbalancer.server.port=18966
       - homepage.group=Public
       - homepage.name=myip
       - homepage.icon=https://myip.godd.site:6443/logos/ios-logo-512.png
