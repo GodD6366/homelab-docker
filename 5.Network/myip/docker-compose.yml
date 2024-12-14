@@ -5,10 +5,11 @@ services:
     image: jason5ng32/myip:latest
     container_name: myip
     restart: unless-stopped
+    network_mode: bridge
     ports:
       - 18966:18966
-    networks:
-      - traefik
+    # networks:
+    #   - traefik
     labels:
     #   - traefik.enable=true
     #   - traefik.docker.network=traefik
@@ -27,6 +28,6 @@ services:
       - homepage.description=查询IP，出口IP，IP信息
       - com.centurylinklabs.watchtower.enable=true
 
-networks:
-  traefik:
-    external: true
+# networks:
+#   traefik:
+#     external: true
