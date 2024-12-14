@@ -1,0 +1,248 @@
+---
+# For configuration options and examples, please see:
+# https://github.com/benphelps/homepage/wiki/Services
+# 默认图标
+# https://github.com/walkxcode/dashboard-icons/blob/main/ICONS.md
+
+- Widget:
+    - Jellyfin:
+        icon: jellyfin.png
+        href: https://v.godd.site:6443/
+        description: Jellyfin Media Server
+        widget:
+          type: jellyfin
+          url: http://10.0.0.88:8096
+          enableUser: true # optional, defaults to false
+          enableNowPlaying: true # optional, defaults to true
+          key: 0f650e79b0c440f4be354725671a5aa0
+          # enableBlocks: true # optional, defaults to false
+          # showEpisodeNumber: true # optional, defaults to false
+          maxShowNowPlayingCount: 2
+          expandOneStreamToTwoRows: true # optional, defaults to true
+
+    - MoviePilot:
+        icon: https://wiki.movie-pilot.org/assets/logo.svg
+        href: https://movie.godd.site:6443
+        ping: https://movie.godd.site:6443
+        description: 媒体服务管理器
+        # server: unraid
+        # container: MoviePilot
+        showStats: true
+        widget:
+          type: customapi
+          url: https://movie.godd.site:6443/api/v1/plugin/HomePage/statistic?apikey=PBCr63udiqAkAnZeLCCW89ELQF3MGdtg
+          method: GET
+          mappings:
+              - field: movie_subscribes
+                label: 电影订阅
+              - field: tv_subscribes
+                label: 电视剧订阅
+              - field: movie_count
+                label: 电影数量
+              - field: tv_count
+                label: 电视剧数量
+                # - field: episode_count
+                #   label: 电影剧集数量
+                # - field: user_count
+                #   label: 用户数量
+                # - field: total_storage
+                #   label: 总空间
+                # - field: free_storage
+                #   label: 剩余空间
+                # - field: now_tasks
+
+    - Speedtest:
+        icon: prtg.png
+        href: http://10.0.0.9:8765
+        description: 网速监测
+        # widget:
+        #   type: myspeed
+        #   url: http://10.0.0.9:5216
+          # password: password # only required if password is set
+        widget:
+          type: speedtest
+          url: http://10.0.0.9:8765
+
+    - qbittorrent:
+        icon: https://img.alicdn.com/imgextra/i3/O1CN017LGIHg1TYxMekLUwj_!!6000000002395-2-tps-400-400.png
+        href: http://10.0.0.66:28080/
+        description: PT Download Server
+        widget:
+          type: qbittorrent
+          url: http://10.0.0.66:28080
+          username: godd
+          password: dcc963.963.
+
+    - Uptime:
+        icon: https://uptime.godd.cc/icon.svg
+        href: https://uptime.godd.cc/status/home
+        description: 在线服务状态检测
+        widget:
+            type: uptimekuma
+            url: https://uptime.godd.cc
+            slug: home
+
+
+    - Synology DSM:
+        icon: https://img.alicdn.com/imgextra/i2/O1CN01RqwlMA1PRqp6ZXnko_!!6000000001838-2-tps-256-256.png
+        href: https://nas.godd.site:6443/
+        description: DS918
+        widget:
+            type: diskstation
+            url: https://nas.godd.site:6443/
+            username: api
+            password: dcc963.963.
+            volume: volume_2 # optional
+
+    - immich:
+        icon: immich.svg
+        href: https://photo.godd.site:6443
+        description: 相册
+        widget:
+          type: immich
+          url: https://photo.godd.site:6443
+          key: QodZt22tZWeJy41JTCQaQQiO6sysvj7wMErsFiarF8
+          version: 2 # optional, default is 1
+
+    - Calibre Web:
+        icon: kavita.png
+        href: https://book.godd.site:6443/
+        description: 图书馆
+        widget:
+          type: calibreweb
+          url: https://book.godd.site:6443/
+          username: godd
+          password: dcc963.963.
+
+- Public:
+    - Follow:
+        icon: https://ghp.ci/https://raw.githubusercontent.com/GodD6366/assets/master/pub/follow.png
+        href: https://app.follow.is/feeds/all/pending?view=0
+        description: 下一代信息浏览器
+
+    - SMS Server:
+        icon: https://sms.godd.cc/favicon.ico
+        href: https://sms.godd.cc
+        description: 查看我所有设备的验证码
+
+    - Dify:
+        icon: https://framerusercontent.com/images/xRJ6vNo9mUYeVNxt0KITXCXEuSk.png
+        href: https://dify.godd.site:6443
+        description: 自定义 AI 工作流
+
+    - firefox-send:
+        icon: firefox-send.png
+        href: https://send.godd.site:6443/
+        description: 简单、私密的文件分享服务
+
+    - Surgio:
+        icon: https://img.alicdn.com/imgextra/i1/O1CN017nh13V1n0sH728b2P_!!6000000005028-2-tps-192-192.png
+        href: https://config.godd.cc
+        description: 🐔场订阅地址管理
+
+    # - AliyunSub:
+    #     icon: https://img.alicdn.com/imgextra/i1/O1CN01JDQCi21Dc8EfbRwvF_!!6000000000236-73-tps-64-64.ico
+    #     href: http://10.0.0.8:6682
+    #     description: 阿里云盘-自动订阅
+
+    # - Jellyfin-Register:
+    #     icon: https://img.alicdn.com/imgextra/i1/O1CN01ArxFAW1YTz95a4E3u_!!6000000003061-2-tps-578-578.png
+    #     href: https://jfa.godd.cc/invite/hJRB8MWvnBEqNmgRvZe4A5
+    #     description: 注册个人 Jellyfin 账号
+
+    - Jellystat:
+        icon: jellystat.svg
+        href: https://jellystat.godd.site:6443/
+        description: Jellyfin 监控
+
+    - Blog:
+        icon: https://img.alicdn.com/imgextra/i1/O1CN01GULpTo1olQ4XJiyJB_!!6000000005265-2-tps-1200-1200.png
+        href: https://blog.godd.site:6443/
+        description: 博客
+
+- Intranet:
+
+    - ikuai:
+        icon: https://www.ikuai8.com/images/logo.png
+        href: http://10.0.0.1
+        description: 主路由
+
+    - openwrt:
+        icon: https://img.alicdn.com/imgextra/i1/O1CN01KG2OkN1UxWDrJjsjy_!!6000000002584-2-tps-1000-1000.png
+        href: http://10.0.0.3
+        description: 旁路由
+
+    - clash:
+        icon: https://img.alicdn.com/imgextra/i1/O1CN01LBcrtn1aXJFPxamei_!!6000000003339-2-tps-512-512.png
+        href: http://10.0.0.3:6366/ui/metacubexd/#/overview?hostname=10.0.0.3&port=6366&secret=584856366
+        # href: http://10.0.0.3:6366/ui/yacd/?hostname=10.0.0.3&port=6366&secret=584856366
+        description: open-clash
+
+    - Surge:
+        icon: https://www.gitbook.com/cdn-cgi/image/width=36,dpr=2,height=36,fit=contain,format=auto/https%3A%2F%2F2344003637-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-M6nEC5_LsT0sgKI-4lb%252Favatar-1589448472076.png%3Fgeneration%3D1589448472848501%26alt%3Dmedia
+        href: https://10.0.0.88:6171/web/index.html#/home
+        description: surge web
+
+    - SpeedTest:
+        icon: librespeed.svg
+        href: http://10.0.0.66:3300
+        description: 内网测速
+
+    - Lucky:
+        icon: https://lucky666.cn/img/logo.svg
+        href: http://10.0.0.9:16601/#/web
+        description: 家用软硬路由公网利器
+
+    - Dokploy:
+        icon: https://dokploy.com/icon.svg?468e58e2fcb8357a
+        href: https://dokploy.godd.site:6443/dashboard/projects
+        description: 强大部署，为您量身定制
+
+
+    # - PVE-Router:
+    #     icon: https://img.alicdn.com/imgextra/i4/O1CN01GcKJvb1jxidBwz1SN_!!6000000004615-2-tps-512-445.png
+    #     href: https://10.0.0.99:8006
+    #     description: 软路由
+
+- Intranet Widget:
+    # - Nginx:
+    #     icon: nginx-proxy-manager.png
+    #     href: http://10.0.0.9:81
+    #     description: Nginx 代理
+    #     widget:
+    #       type: npm
+    #       url: http://10.0.0.9:81
+    #       username: changchun.dcc@gmail.com
+    #       password: dcc963.963.
+
+    - PVE:
+        icon: https://img.alicdn.com/imgextra/i4/O1CN01GcKJvb1jxidBwz1SN_!!6000000004615-2-tps-512-445.png
+        href: https://10.0.0.100:8006
+        description: 服务器
+        widget:
+          type: proxmox
+          url: https://10.0.0.100:8006
+          username: root@pam!homepage
+          password: c410ae3f-ac0b-4089-89ad-3f6bc4f848ac
+
+    # 路由设备
+    - PVE-Router:
+        icon: https://img.alicdn.com/imgextra/i4/O1CN01GcKJvb1jxidBwz1SN_!!6000000004615-2-tps-512-445.png
+        href: https://10.0.0.99:8006
+        description: 软路由
+        widget:
+          type: proxmox
+          url: https://10.0.0.99:8006
+          username: root@pam!homepage
+          password: 4cc783f9-946f-436e-867d-422608402bc6
+
+    - Portainer-LXC:
+        icon: https://img.alicdn.com/imgextra/i2/O1CN01c81Ch526PaGzjhpzF_!!6000000007654-2-tps-2500-2500.png
+        href: http://10.0.0.8:9000/#!/2/docker/dashboard
+        description: Portainer For LXC
+        widget:
+          type: portainer
+          url: http://10.0.0.8:9000
+          env: 2
+          key: ptr_WG7wZ9KOMwCKsyOzbTuuZNe53BXjBwQehw+SFHqaSq4=
+

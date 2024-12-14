@@ -1,0 +1,26 @@
+---
+# For configuration options and examples, please see:
+# https://github.com/benphelps/homepage/wiki/Docker-Integration
+
+# pve-router-docker:
+#   host: 10.0.0.9
+#   port: 2375
+
+# lxc-docker:
+#   host: docker1.godd.site
+#   port: 12375
+
+pve-router-docker:
+  host: 10.0.0.9
+  port: 2375
+
+pve-docker:
+  host: 10.0.0.100
+  port: 2375
+
+# ali-sg-docker:
+#   host: docker-tcp.godd.cc
+#   port: 80
+
+my-docker:
+  socket: /var/run/docker.sock

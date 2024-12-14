@@ -1,0 +1,45 @@
+---
+# For configuration options and examples, please see:
+# https://github.com/benphelps/homepage/wiki/Bookmarks
+
+- Developer:
+    - Github:
+        - abbr: GH
+          icon: https://github.com/favicon.ico
+          href: https://github.com/
+    - landiannews:
+        - abbr: LD
+          icon: https://static.lancdn.com/landian/v4.0.1/images/favicon.png
+          href: https://www.landiannews.com/
+    - Cloudflare:
+        - abbr: CF
+          icon: https://cloudflare.com/favicon.ico
+          href: https://dash.cloudflare.com/e7d368a9737267bcd5d6a16bb6f74aa7/godd.cc
+
+- Social:
+    - v2ex:
+        - abbr: V2
+          icon: https://v2ex.com/favicon.ico
+          href: https://www.v2ex.com/?tab=hot
+    - dev.to:
+        - abbr: DV
+          icon: https://media.dev.to/cdn-cgi/image/width=128,height=,fit=scale-down,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8j7kvp660rqzt99zui8e.png
+          href: https://dev.to/
+    - Reddit:
+        - abbr: RE
+          icon: https://reddit.com/favicon.ico
+          href: https://reddit.com/
+
+- Entertainment:
+    - YouTube:
+        - abbr: YT
+          icon: https://www.youtube.com/favicon.ico
+          href: https://youtube.com/
+    - BiliBili:
+        - abbr: BL
+          icon: https://www.bilibili.com/favicon.ico?v=1
+          href: https://bilibili.com/
+    - DouYin:
+        - abbr: DY
+          icon: https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/favicon.png
+          href: https://www.douyin.com

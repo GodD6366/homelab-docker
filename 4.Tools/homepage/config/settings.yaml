@@ -1,0 +1,35 @@
+---
+# For configuration options and examples, please see:
+# https://github.com/benphelps/homepage/wiki/Settings
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: b8414ecb709146158cc90321220910
+
+theme: dark # or light
+
+headerStyle: boxed
+
+title: GodD's Awesome Homepage
+
+language: zh-CN # en
+
+background: https://images.unsplash.com/photo-1542831371-32f555c86880?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80
+backgroundOpacity: 0.2
+
+# fontSize: 20
+favicon: https://img.alicdn.com/imgextra/i4/O1CN012VRqMx1zBevGk6jyA_!!6000000006676-2-tps-200-200.png
+
+layout:
+  Widget:
+    style: row
+    columns: 3
+  Public:
+    style: row
+    columns: 4
+  Intranet:
+    style: row
+    columns: 4
+  Intranet Widget:
+    style: row
+    columns: 3
